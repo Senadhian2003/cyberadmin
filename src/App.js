@@ -11,6 +11,7 @@ import CertificateParticipants from './components/certificateParticipants';
 import CertificateWinner from './components/certificate-winner';
 import Verification from './components/Verification';
 import Count from './components/count';
+import UserDetails from './components/userDetails';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
                     <Route path="/certificate/participants" element={<CertificateParticipants/>} />
                     <Route path="/certificate/winners" element={<CertificateWinner/>} />
                     <Route path="/count" element={<Count/>} />
-
+                    <Route path="/userDetails" element={<UserDetails/>} />
                 </Routes>
             </Router>
       </>

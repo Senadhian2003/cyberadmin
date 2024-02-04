@@ -9,7 +9,7 @@ export default function Home() {
   const [id,setid]=useState("")
   
     let k = useParams()
-    let detail = data[k.id-1]
+    let detail = data[k.id]
     
     const [event,setevent]=useState(detail.btnId)
    

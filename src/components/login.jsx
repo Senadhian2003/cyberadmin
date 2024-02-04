@@ -17,11 +17,11 @@ export default function Login() {
       
       console.log(id);
       navigate("/attendance");
-    } else if (username == "pixadmin" && password == "234328") {
+    } else if (username == "papadmin" && password == "234328") {
       id = 1;
       console.log(id);
       navigate("/home/" + id);
-    } else if (username == "papadmin" && password == "234328") {
+    } else if (username == "pixadmin" && password == "234328") {
       id = 2;
       console.log(id);
       navigate("/home/" + id);

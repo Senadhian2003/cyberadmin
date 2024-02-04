@@ -17,7 +17,7 @@ export default function CertificateWinner() {
     const [clgname3,setClgName3] = useState("-");
     
     const [detail,setDetail] = useState();
-    const [option,setOption] = useState('python-coding');
+    const [option,setOption] = useState('pixel-studio');
 
     useEffect(() => {
         console.log('trigger use effect hook');
@@ -28,7 +28,7 @@ export default function CertificateWinner() {
           //   console.log(snapshot.val());
               let x = snapshot.val();
               let arr =Object.values(x)
-            //   console.log(arr)
+              // console.log(arr)
               setData(arr);
 
               const dbRef = ref(getDatabase());
@@ -41,22 +41,22 @@ export default function CertificateWinner() {
                   //   console.log(snapshot.val());
                       let x = snapshot.val();
                       let arr1 =Object.values(x);
-                      console.log(arr1)
+                      console.log("ARR1 : ",arr1)
                       let obj = {
                         id : arr[i],
                         name : arr1[2]
                       }
                       if(i==0){
-                        setName1(arr1[6])
-                        setClgName1(arr1[2])
+                        setName1(arr1[7])
+                        setClgName1(arr1[1])
                       }
                       else if(i==1){
-                        setName2(arr1[6])
-                        setClgName2(arr1[2])
+                        setName2(arr1[7])
+                        setClgName2(arr1[1])
                       }
                       else{
-                        setName3(arr1[6])
-                        setClgName3(arr1[2])
+                        setName3(arr1[7])
+                        setClgName3(arr1[1])
                       }
 
                       arrobj.push(obj)
@@ -146,14 +146,14 @@ export default function CertificateWinner() {
          
         }} aria-label="Default select example">
  
- <option value="python-coding">Python Coding</option>
- <option value="paper-presentation">Paper Presentation</option>
- <option value="optimized-coding">Optimized Coding</option>
- <option value="solo-compile">Solo Compile</option>
- <option value="connections">Connections</option>
- <option value="ship-wreck">Ship Wreck</option>
- <option value="treasure-hunt">Treasure Hunt</option>
- <option value="capture-the-flag">Capture the flag</option>
+ <option value="pixel-studio">Pixel Studio</option>
+ <option value="paper-pinnacle">Paper Pinnacle</option>
+ <option value="blitz-byte">Blitz Byte</option>
+ <option value="web-vortex">Web Vortex</option>
+ <option value="con-tac-tix">ConTacTix</option>
+ <option value="lexi-charm">Lexi Charm</option>
+ <option value="smirk">Smirk</option>
+ 
 </select>
    
 

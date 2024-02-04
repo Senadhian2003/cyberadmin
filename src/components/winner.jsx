@@ -12,7 +12,7 @@ export default function Winner() {
     const [cyId3,setCyId3] = useState();
   
     let k = useParams()
-    let detail = data[k.id-1]
+    let detail = data[k.id]
     let dbName = detail.dbName;
     console.log(detail.name)
 

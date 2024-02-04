@@ -20,77 +20,70 @@ export default function Home() {
       
        if(id.length!=0){
         const dbRef = ref(getDatabase());
-        get(child(dbRef, `users/${id}`)).then((snapshot) => {
+        get(child(dbRef, `cyber/${id}`)).then((snapshot) => {
         if (snapshot.exists()) {
+          console.log("jjojo")
             const db = getDatabase();
             alert("Success 👌👌👌👌")
             
-            if(event=="PythonCoding")
+            if(event=="Paper Pinnacle")
             {
               console.log("hi")
-                update(ref(db,`/users/${id}`),
+                update(ref(db,`/cyber/${id}`),
                 {
-                  PythonCoding:1,
-                  isParticipate:1
+                  paperPinnacle:2
                 })
              }
-             else if(event=="PaperPresentation")
+             else if(event=="Pixel studio")
             {
-                console.log("jojoj")
-                update(ref(db,`/users/${id}`),
+                
+                update(ref(db,`/cyber/${id}`),
                 {
-                  PaperPresentation:1,
-                  isParticipate:1
+                  
+                  pixelPlayground:2
+                
                 })
              }
-            else if(event=="SoloCompile")
+            else if(event=="BlitzByte")
             {
-                update(ref(db,`/users/${id}`),
+                update(ref(db,`/cyber/${id}`),
                 {
-                  SoloCompile:1,
-                  isParticipate:1
+                  blitzbyte:2
+                 
                 })
              }
-            else if(event=="CaptureTheFlag")
+            else if(event=="Web Vortex")
             {
-                update(ref(db,`/users/${id}`),
+                update(ref(db,`/cyber/${id}`),
                 {
-                  CaptureTheFlag:1,
-                  isParticipate:1
+                  webVortex:2
                 })
              }
-            else if(event=="OptimizeCoding")
+            else if(event=="ConTacTix")
             {   console.log("triggered")
-                update(ref(db,`/users/${id}`),
+                update(ref(db,`/cyber/${id}`),
                 {
-                  OptimizeCoding:1,
-                  isParticipate:1
+                  conTacTix:2
                 })
              }
-             else if(event=="Connections")
+             else if(event=="Lexi Charm")
             {
-                update(ref(db,`/users/${id}`),
+                update(ref(db,`/cyber/${id}`),
                 {
-                  Connections:1,
-                  isParticipate:1
-                })
+                  
+                  lexiCharm:2
+
+                  })
              }
-             else if(event=="ShipWreck")
+             else if(event=="Smirk")
             {
-                update(ref(db,`/users/${id}`),
+                update(ref(db,`/cyber/${id}`),
                 {
-                  ShipWreck:1,
-                  isParticipate:1
+                  smirk:2
                 })
              }
-             else if(event=="TreasureHunt")
-            {
-                update(ref(db,`/users/${id}`),
-                {
-                  TreasureHunt:1,
-                  isParticipate:1
-                })
-             }
+         
+
            
             
         }
@@ -131,7 +124,7 @@ setid("")
                 onChange={(e)=>{setid(e.target.value)}}
               />
               </div>
-              
+               
               <div className="d-grid gap-2 col-6 mx-auto button">
                 <button className="btn btn-info buton " id={detail.btnId} onClick={verifyUser} style={{color:'white'}} > Verify </button> 
                 

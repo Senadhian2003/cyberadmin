@@ -11,28 +11,30 @@ export default function Verification(){
    
     
     const [event,setevent]=useState("Attendance")
-   
+    console.log("senthajiji")
     function verifyUser(e){
         setevent(e.target.id);
         console.log(id)
         console.log("hi",event)
+        
         if(id.length!=0){
             
         const dbRef = ref(getDatabase());
-        get(child(dbRef, `users/${id}`)).then((snapshot) => {
+        get(child(dbRef, `cyber/${id}`)).then((snapshot) => {
         if (snapshot.exists()) {
             const db = getDatabase();
            
               console.log("hi")
-                update(ref(db,`/users/${id}`),
+                update(ref(db,`/cyber/${id}`),
                 {
-                  Attendence:1
+                  isParticipate:1
                 })
+                alert("Success❤")
             
             
         }
         else {
-            alert("No data available")
+            alert("No data available 🤷‍♂🤷‍♂")
         }
 }).catch((error) => {
   console.error(error);
@@ -40,7 +42,7 @@ export default function Verification(){
 
         }
     else{
-        alert("Enter valid Id")
+        alert("Enter valid Id 👺👺")
     }
 
 setid("")

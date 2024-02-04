@@ -13,7 +13,7 @@ export default function CertificateParticipants() {
 const dbRef = ref(getDatabase());
 const navigate = useNavigate();
 useEffect(() => {
-  get(child(dbRef, 'users')).then((snapshot) => {
+  get(child(dbRef, 'cyber')).then((snapshot) => {
   
     if (snapshot.exists()) {
       let x=snapshot.val()
@@ -33,7 +33,7 @@ useEffect(() => {
 function Suc(e){
   let id=e.target.id
   console.log(id)
-  update(ref(db,`/users/${id}`),{
+  update(ref(db,`/cyber/${id}`),{
     isParticipate:2
    }) 
    setallow("hi")
@@ -45,13 +45,13 @@ function Suc(e){
 function fail(e){
   let id=e.target.id
   console.log(id)
-  update(ref(db,`/users/${id}`),{
+  update(ref(db,`/cyber/${id}`),{
     isParticipate:1
    }) 
    setallow("hi")
 
 }
-
+console.log(data)
 if(data) return (
   <div>
 
@@ -63,36 +63,32 @@ if(data) return (
           <th>Unique Id</th>
           <th>Name</th>
           <th>College</th>
-          <th>Python Coding</th>
-          <th>Solo Compile</th>
-          <th>Paper Presentation</th>
-          <th>Optimized Coding</th>
-          <th>Capture the flag</th>
-          <th>Connections</th>
-          <th>Ship wreck</th>
-          <th>Treasure Hunt</th>
-          <th>Certify</th>
-          <th>Remove</th>
-
+          <th>Paper Pinnacle</th>
+          <th>Pixel studio</th>
+          <th>BlitzByte</th>
+          <th>Web Vortex</th>
+          <th>ConTacTix</th>
+          <th>Lexi Charm</th>
+          <th>Smirk</th>
         </tr>
       </thead>
       {
        (data.map((data)=>{
         if(data.isParticipate>=1) return <tbody className={data.isParticipate == 2 ? "act":"norm"}>
         <tr >
-          <td>{data.UID}</td>
-          <td>{data.Name}</td>
-          <td>{data.College}</td>
-          <td>{data.PythonCoding=== 1 ? "YES":"NO"}</td>
-          <td>{data.SoloCompile=== 1 ? "YES":"NO"}</td>
-          <td>{data.PaperPresentation=== 1 ? "YES":"NO"}</td>
-          <td>{data.OptimizeCoding=== 1 ? "YES":"NO"}</td>
-          <td>{data.CaptureTheFlag=== 1 ? "YES":"NO"}</td>
-          <td>{data.Connections=== 1 ? "YES":"NO"}</td>
-          <td>{data.ShipWreck=== 1 ? "YES":"NO"}</td>
-          <td>{data.TreasureHunt=== 1 ? "YES":"NO"}</td>
-          <td> <button className='btn o' id={data.UID}  onClick={Suc}>Given</button></td>
-          <td><button className='btn t' id={data.UID} onClick={fail} >Not Given</button></td>
+          <td>{data.userId}</td>
+          <td>{data.name}</td>
+          <td>{data.college}</td>
+          <td>{data.paperPinnacle=== 2 ? "YES":"NO"}</td>
+          <td>{data.pixelPlayground=== 2 ? "YES":"NO"}</td>
+          <td>{data.blitzbyte=== 2 ? "YES":"NO"}</td>
+          <td>{data.webVortex=== 2 ? "YES":"NO"}</td>
+          <td>{data.conTacTix=== 2 ? "YES":"NO"}</td>
+          <td>{data.lexiCharm=== 2 ? "YES":"NO"}</td>
+          <td>{data.smirk=== 2 ? "YES":"NO"}</td>
+         
+          <td> <button className='btn o' id={data.userId}  onClick={Suc}>Given</button></td>
+          <td><button className='btn t' id={data.userId} onClick={fail} >Not Given</button></td>
         
           {console.log(data.isParticipate)}
 

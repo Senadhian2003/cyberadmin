@@ -1,13 +1,11 @@
 let data = [{name : 'Attendance',btnId : 'Attendance',dbName:'Attendance'},
-{name : 'Python Coding',btnId : 'PythonCoding',dbName:'python-coding'},
-{name : 'Paper Presentation',btnId : 'PaperPresentation',dbName : 'paper-presentation'},
-{name : 'Optimized Coding',btnId : 'OptimizeCoding',dbName : 'optimized-coding'},
-{name : 'Solo Compile',btnId : 'SoloCompile',dbName : 'solo-compile'},
-
-{name : 'Connections',btnId : 'Connections',dbName : 'connections'},
-{name : 'Ship Wreck',btnId : 'ShipWreck',dbName : 'ship-wreck'},
-{name : 'Treasure Hunt',btnId : 'TreasureHunt',dbName : 'treasure-hunt'},
-{name : 'Capture The Flag',btnId : 'CaptureTheFlag',dbName : 'capture-the-flag'}
+{name : 'Paper Pinnacle',btnId : 'PaperPinnacle',dbName:'paper-pinnacle'},
+{name : 'Pixel studio',btnId : 'PixelStudio',dbName : 'pixel-studio'},
+{name : 'BlitzByte',btnId : 'BlitzByte',dbName : 'blitz-byte'},
+{name : 'Web Vortex',btnId : 'WebVortex',dbName : 'web-vortex'},
+{name : 'ConTacTix',btnId : 'ConTacTix',dbName : 'con-tac-tix'},
+{name : 'Lexi Charm',btnId : 'LexiCHarm',dbName : 'lexi-charm'},
+{name : 'Smirk',btnId : 'Smirk',dbName : 'smirk'},
 
 
 ]

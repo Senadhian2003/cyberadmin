@@ -1,5 +1,15 @@
 {
   "projects": {
-    "default": "cyberadmin-e5ed7"
-  }
+    "default": "cybernautix"
+  },
+  "targets": {
+    "cybernautix": {
+      "hosting": {
+        "admin": [
+          "cyberadmin2024"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

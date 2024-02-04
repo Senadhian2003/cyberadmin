@@ -35,7 +35,7 @@ export default function CertificateWinner() {
               let arrName = []
               let arrobj = []
               for(let i=0;i<3;i++){
-                get(child(dbRef, `users/${arr[i]}`)).then((snapshot) => {
+                get(child(dbRef, `cyber/${arr[i]}`)).then((snapshot) => {
                   if (snapshot.exists()) {
           
                   //   console.log(snapshot.val());

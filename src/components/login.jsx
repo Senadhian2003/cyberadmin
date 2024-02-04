@@ -17,41 +17,35 @@ export default function Login() {
       
       console.log(id);
       navigate("/attendance");
-    } else if (username == "pyadmin" && password == "234328") {
-      id = 2;
+    } else if (username == "pixadmin" && password == "234328") {
+      id = 1;
       console.log(id);
       navigate("/home/" + id);
     } else if (username == "papadmin" && password == "234328") {
+      id = 2;
+      console.log(id);
+      navigate("/home/" + id);
+    } else if (username == "bliadmin" && password == "234328") {
       id = 3;
       console.log(id);
       navigate("/home/" + id);
-    } else if (username == "optiadmin" && password == "234328") {
+    } else if (username == "webadmin" && password == "234328") {
       id = 4;
       console.log(id);
       navigate("/home/" + id);
-    } else if (username == "soloadmin" && password == "234328") {
+    }  else if (username == "conadmin" && password == "234328") {
       id = 5;
       console.log(id);
       navigate("/home/" + id);
-    } else if (username == "entry" && password == "234328") {
-      navigate("/data");
-    } else if (username == "conadmin" && password == "234328") {
+    } else if (username == "lexadmin" && password == "234328") {
       id = 6;
       console.log(id);
       navigate("/home/" + id);
-    } else if (username == "shipadmin" && password == "234328") {
+    } else if (username == "smiadmin" && password == "234328") {
       id = 7;
       console.log(id);
       navigate("/home/" + id);
-    } else if (username == "treasureadmin" && password == "234328") {
-      id = 8;
-      console.log(id);
-      navigate("/home/" + id);
-    }else if (username == "capadmin" && password == "234328") {
-      id = 9;
-      console.log(id);
-      navigate("/home/" + id);
-    } 
+    }
     else if (username == "certificate" && password == "234328") {
       navigate("/certificate/participants");
     } else {
